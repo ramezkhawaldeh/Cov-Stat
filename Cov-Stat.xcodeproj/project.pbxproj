@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		925F40A326548AE000FC3D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40A226548AE000FC3D99 /* AppDelegate.swift */; };
 		925F40A526548AE000FC3D99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40A426548AE000FC3D99 /* SceneDelegate.swift */; };
-		925F40A726548AE000FC3D99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40A626548AE000FC3D99 /* ViewController.swift */; };
+		925F40A726548AE000FC3D99 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40A626548AE000FC3D99 /* MainViewController.swift */; };
 		925F40AA26548AE000FC3D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925F40A826548AE000FC3D99 /* Main.storyboard */; };
 		925F40AC26548AE200FC3D99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925F40AB26548AE200FC3D99 /* Assets.xcassets */; };
 		925F40AF26548AE200FC3D99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925F40AD26548AE200FC3D99 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		925F409F26548AE000FC3D99 /* Cov-Stat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cov-Stat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925F40A226548AE000FC3D99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925F40A426548AE000FC3D99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		925F40A626548AE000FC3D99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		925F40A626548AE000FC3D99 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		925F40A926548AE000FC3D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		925F40AB26548AE200FC3D99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925F40AE26548AE200FC3D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,39 @@
 		925F40A126548AE000FC3D99 /* Cov-Stat */ = {
 			isa = PBXGroup;
 			children = (
+				925F40B826548C8100FC3D99 /* Controllers */,
+				925F40B726548C7B00FC3D99 /* Models */,
+				925F40B626548C7600FC3D99 /* Views */,
 				925F40A226548AE000FC3D99 /* AppDelegate.swift */,
 				925F40A426548AE000FC3D99 /* SceneDelegate.swift */,
-				925F40A626548AE000FC3D99 /* ViewController.swift */,
-				925F40A826548AE000FC3D99 /* Main.storyboard */,
 				925F40AB26548AE200FC3D99 /* Assets.xcassets */,
 				925F40AD26548AE200FC3D99 /* LaunchScreen.storyboard */,
 				925F40B026548AE200FC3D99 /* Info.plist */,
 			);
 			path = "Cov-Stat";
+			sourceTree = "<group>";
+		};
+		925F40B626548C7600FC3D99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				925F40A826548AE000FC3D99 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		925F40B726548C7B00FC3D99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		925F40B826548C8100FC3D99 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				925F40A626548AE000FC3D99 /* MainViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				925F40A726548AE000FC3D99 /* ViewController.swift in Sources */,
+				925F40A726548AE000FC3D99 /* MainViewController.swift in Sources */,
 				925F40A326548AE000FC3D99 /* AppDelegate.swift in Sources */,
 				925F40A526548AE000FC3D99 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S38P46V8BW;
 				INFOPLIST_FILE = "Cov-Stat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S38P46V8BW;
 				INFOPLIST_FILE = "Cov-Stat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
