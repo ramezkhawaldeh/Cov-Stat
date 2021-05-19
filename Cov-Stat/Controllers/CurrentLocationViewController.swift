@@ -30,16 +30,7 @@ class CurrentLocationViewController: UIViewController, UITabBarControllerDelegat
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         self.getReversedGeoLocation(coordinates: locationManager.location?.coordinate)
-        self.getCountryFlag(url: "https://restcountries.eu/rest/v2/name/jordan?fields=name;flag;alpha2Code") {
-            country in
-            if let country = country {
-                self.currentCountryCode = country.alpha2Code
-                DispatchQueue.main.async {
-                    self.flagImageView.image = self.getSVGImage(from: country.flag)
-                }
-                
-            }
-        }
+        
     }
     
     private func getDate() -> (String, String){
@@ -67,6 +58,15 @@ extension CurrentLocationViewController: CLLocationManagerDelegate {
                 self.getCovidCasesData(url: "https://api.covid19tracking.narrativa.com/api/country/\(country)?date_from=\(self.yesterday!)&date_to=\(self.today!)") { results in
                     
                     if let results = results {
+                        self.getCountryFlag(url: "https://restcountries.eu/rest/v2/name/\(country)?fields=name;flag;alpha2Code") {
+                            country in
+                            if let country = country {
+                                self.currentCountryCode = country.alpha2Code
+                                DispatchQueue.main.async {
+                                    self.flagImageView.image = self.getSVGImage(from: country.flag)
+                                }
+                            }
+                        }
                         print(results)
                     } else {
                         
