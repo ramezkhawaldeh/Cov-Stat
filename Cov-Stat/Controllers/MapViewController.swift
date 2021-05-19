@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, UITabBarControllerDelegate {
     
      @IBOutlet var mapView: MKMapView!
      var locationManager = CLLocationManager()
@@ -16,7 +16,8 @@ class MapViewController: UIViewController {
      override func viewDidLoad() {
          super.viewDidLoad()
          //mapView.isHidden = true
-         
+        self.tabBarController?.delegate = self
+       
      }
      
  }

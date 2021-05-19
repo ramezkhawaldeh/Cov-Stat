@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 extension UITableViewCell {
 
     static var nib: UINib {

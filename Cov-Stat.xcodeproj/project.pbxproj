@@ -18,6 +18,8 @@
 		925F40C32654999100FC3D99 /* UITableView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C22654999100FC3D99 /* UITableView-Extension.swift */; };
 		925F40C52654999B00FC3D99 /* UITableViewCell-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C42654999B00FC3D99 /* UITableViewCell-Extension.swift */; };
 		925F40C7265499A400FC3D99 /* NSObject-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C6265499A400FC3D99 /* NSObject-Extension.swift */; };
+		925F40CB26549D5200FC3D99 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40CA26549D5200FC3D99 /* UIViewController-Extension.swift */; };
+		925F40CD26549D6C00FC3D99 /* CovidResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40CC26549D6C00FC3D99 /* CovidResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		925F40C22654999100FC3D99 /* UITableView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-Extension.swift"; sourceTree = "<group>"; };
 		925F40C42654999B00FC3D99 /* UITableViewCell-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell-Extension.swift"; sourceTree = "<group>"; };
 		925F40C6265499A400FC3D99 /* NSObject-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject-Extension.swift"; sourceTree = "<group>"; };
+		925F40CA26549D5200FC3D99 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
+		925F40CC26549D6C00FC3D99 /* CovidResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		925F40B726548C7B00FC3D99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				925F40CC26549D6C00FC3D99 /* CovidResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 				925F40C22654999100FC3D99 /* UITableView-Extension.swift */,
 				925F40C42654999B00FC3D99 /* UITableViewCell-Extension.swift */,
 				925F40C6265499A400FC3D99 /* NSObject-Extension.swift */,
+				925F40CA26549D5200FC3D99 /* UIViewController-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,10 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				925F40A326548AE000FC3D99 /* AppDelegate.swift in Sources */,
+				925F40CB26549D5200FC3D99 /* UIViewController-Extension.swift in Sources */,
 				925F40C32654999100FC3D99 /* UITableView-Extension.swift in Sources */,
 				925F40C12654998700FC3D99 /* ReusableViewProtocol.swift in Sources */,
 				925F40BC2654907F00FC3D99 /* CurrentLocationViewController.swift in Sources */,
 				925F40A526548AE000FC3D99 /* SceneDelegate.swift in Sources */,
+				925F40CD26549D6C00FC3D99 /* CovidResult.swift in Sources */,
 				925F40C7265499A400FC3D99 /* NSObject-Extension.swift in Sources */,
 				925F40C52654999B00FC3D99 /* UITableViewCell-Extension.swift in Sources */,
 				925F40BA26548F7E00FC3D99 /* MapViewController.swift in Sources */,

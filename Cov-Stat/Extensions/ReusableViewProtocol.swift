@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ReusableView: AnyObject {
     static var defaultReuseIdentifier: String { get }
