@@ -14,6 +14,10 @@
 		925F40AF26548AE200FC3D99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925F40AD26548AE200FC3D99 /* LaunchScreen.storyboard */; };
 		925F40BA26548F7E00FC3D99 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40B926548F7E00FC3D99 /* MapViewController.swift */; };
 		925F40BC2654907F00FC3D99 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40BB2654907F00FC3D99 /* CurrentLocationViewController.swift */; };
+		925F40C12654998700FC3D99 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C02654998700FC3D99 /* ReusableViewProtocol.swift */; };
+		925F40C32654999100FC3D99 /* UITableView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C22654999100FC3D99 /* UITableView-Extension.swift */; };
+		925F40C52654999B00FC3D99 /* UITableViewCell-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C42654999B00FC3D99 /* UITableViewCell-Extension.swift */; };
+		925F40C7265499A400FC3D99 /* NSObject-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C6265499A400FC3D99 /* NSObject-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		925F40B026548AE200FC3D99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		925F40B926548F7E00FC3D99 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		925F40BB2654907F00FC3D99 /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
+		925F40C02654998700FC3D99 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		925F40C22654999100FC3D99 /* UITableView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-Extension.swift"; sourceTree = "<group>"; };
+		925F40C42654999B00FC3D99 /* UITableViewCell-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell-Extension.swift"; sourceTree = "<group>"; };
+		925F40C6265499A400FC3D99 /* NSObject-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		925F40A126548AE000FC3D99 /* Cov-Stat */ = {
 			isa = PBXGroup;
 			children = (
+				925F40BF2654996800FC3D99 /* Extensions */,
 				925F40B826548C8100FC3D99 /* Controllers */,
 				925F40B726548C7B00FC3D99 /* Models */,
 				925F40B626548C7600FC3D99 /* Views */,
@@ -92,6 +101,17 @@
 				925F40B926548F7E00FC3D99 /* MapViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		925F40BF2654996800FC3D99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				925F40C02654998700FC3D99 /* ReusableViewProtocol.swift */,
+				925F40C22654999100FC3D99 /* UITableView-Extension.swift */,
+				925F40C42654999B00FC3D99 /* UITableViewCell-Extension.swift */,
+				925F40C6265499A400FC3D99 /* NSObject-Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				925F40A326548AE000FC3D99 /* AppDelegate.swift in Sources */,
+				925F40C32654999100FC3D99 /* UITableView-Extension.swift in Sources */,
+				925F40C12654998700FC3D99 /* ReusableViewProtocol.swift in Sources */,
 				925F40BC2654907F00FC3D99 /* CurrentLocationViewController.swift in Sources */,
 				925F40A526548AE000FC3D99 /* SceneDelegate.swift in Sources */,
+				925F40C7265499A400FC3D99 /* NSObject-Extension.swift in Sources */,
+				925F40C52654999B00FC3D99 /* UITableViewCell-Extension.swift in Sources */,
 				925F40BA26548F7E00FC3D99 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 class CurrentLocationViewController: UIViewController {
 
     @IBOutlet var flagImageView: UIImageView!
     @IBOutlet var tableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,4 @@ class CurrentLocationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-
 }
