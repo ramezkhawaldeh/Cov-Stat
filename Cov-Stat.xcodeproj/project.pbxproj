@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0938640A74CA784A71047309 /* Pods_Cov_Stat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A5F45FA71F31E745712C5D /* Pods_Cov_Stat.framework */; };
+		9229B16C26554CC6000321C8 /* CovidCasesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9229B16A26554CC6000321C8 /* CovidCasesTableViewCell.swift */; };
+		9229B16D26554CC6000321C8 /* CovidCasesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9229B16B26554CC6000321C8 /* CovidCasesTableViewCell.xib */; };
 		925F40A326548AE000FC3D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40A226548AE000FC3D99 /* AppDelegate.swift */; };
 		925F40A526548AE000FC3D99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40A426548AE000FC3D99 /* SceneDelegate.swift */; };
 		925F40AA26548AE000FC3D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925F40A826548AE000FC3D99 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		13A4680CECE9CB21506580AF /* Pods-Cov-Stat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cov-Stat.debug.xcconfig"; path = "Target Support Files/Pods-Cov-Stat/Pods-Cov-Stat.debug.xcconfig"; sourceTree = "<group>"; };
 		26A5F45FA71F31E745712C5D /* Pods_Cov_Stat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cov_Stat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9229B16A26554CC6000321C8 /* CovidCasesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCasesTableViewCell.swift; sourceTree = "<group>"; };
+		9229B16B26554CC6000321C8 /* CovidCasesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidCasesTableViewCell.xib; sourceTree = "<group>"; };
 		925F409F26548AE000FC3D99 /* Cov-Stat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cov-Stat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925F40A226548AE000FC3D99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925F40A426548AE000FC3D99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 			children = (
 				925F40D62654C58B00FC3D99 /* NewsTableViewCell.swift */,
 				925F40D72654C58B00FC3D99 /* NewsTableViewCell.xib */,
+				9229B16A26554CC6000321C8 /* CovidCasesTableViewCell.swift */,
+				9229B16B26554CC6000321C8 /* CovidCasesTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 				925F40AC26548AE200FC3D99 /* Assets.xcassets in Resources */,
 				925F40D92654C58B00FC3D99 /* NewsTableViewCell.xib in Resources */,
 				925F40AA26548AE000FC3D99 /* Main.storyboard in Resources */,
+				9229B16D26554CC6000321C8 /* CovidCasesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +318,7 @@
 				925F40C7265499A400FC3D99 /* NSObject-Extension.swift in Sources */,
 				925F40C52654999B00FC3D99 /* UITableViewCell-Extension.swift in Sources */,
 				925F40D12654C4F700FC3D99 /* APIKey.swift in Sources */,
+				9229B16C26554CC6000321C8 /* CovidCasesTableViewCell.swift in Sources */,
 				925F40BA26548F7E00FC3D99 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

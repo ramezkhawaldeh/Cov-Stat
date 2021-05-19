@@ -70,18 +70,19 @@ extension CurrentLocationViewController: CLLocationManagerDelegate {
                         self?.getNewsData(country: country) { [weak self] news in
                             if let news = news {
                                 self?.news = news
+                                DispatchQueue.main.async {
+                                    self?.flagImageView.isHidden = false
+                                    self?.activityIndicator.stopAnimating()
+                                    self?.tableView.reloadData()
+                                    self?.tableView.isHidden = false
+                                }
                             }
                         }
                         print(results)
                     } else {
                         
                     }
-                    DispatchQueue.main.async {
-                        self?.flagImageView.isHidden = false
-                        self?.activityIndicator.stopAnimating()
-                        self?.tableView.reloadData()
-                        self?.tableView.isHidden = false
-                    }
+                   
                 }
             }
         }

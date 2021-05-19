@@ -27,9 +27,28 @@ class MapViewController: UIViewController {
         self.getCovidCountiresList { list in
             if let list = list {
                 self.countriesList = list
+                
+                let dispatchGroup = DispatchGroup()
+                list.countries.forEach { country in
+                    dispatchGroup.enter()
+                    self.getCountryFlagAndCoordinates(url:"https://restcountries.eu/rest/v2/name/\(country.name)?fields=name;flag;alpha2Code;latlng" ) { city in
+                        
+                        self.cities.append(CovidMapCity(name: city!.name, coordinate: CLLocationCoordinate2D(latitude: city?.latlng[0], longitude: city?.latlng[1]), numberOfCases: String?))
+                        dispatchGroup.leave()
+                        
+                }
+                    dispatchGroup.notify(queue: .main) {
+                        //what to do
+                    }
+                    
+                    
+                }
+                
                // self.
             }
         }
+        
+       
         print(self.countriesList)
         self.tabBarController?.delegate = self
     }
