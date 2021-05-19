@@ -21,6 +21,7 @@ class CurrentLocationViewController: UIViewController, UITabBarControllerDelegat
     var currentCountryCode: String?
     var today, yesterday: String?
     var news: News?
+    var cases: CovidResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,19 @@ class CurrentLocationViewController: UIViewController, UITabBarControllerDelegat
         return ((formatter.string(from: today)),(formatter.string(from: yesterday!)))
         
     }
+    
+    @IBAction func didPressFlagImage(_ sender: Any) {
+        self.performSegue(withIdentifier: "showCasesStat", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCasesStat" {
+            if let viewController = segue.destination as? StatusViewController {
+                viewController.statistics = self.cases
+            }
+        }
+    }
+    
 }
 
 extension CurrentLocationViewController: CLLocationManagerDelegate {
@@ -58,6 +72,9 @@ extension CurrentLocationViewController: CLLocationManagerDelegate {
                 self.country = country
                 self.getCovidCasesData(url: "https://api.covid19tracking.narrativa.com/api/country/\(country)?date_from=\(self.yesterday!)&date_to=\(self.today!)") { [weak self] results in
                     if let results = results {
+                        DispatchQueue.main.async {
+                            self?.cases = results
+                        }
                         self?.getCountryFlagAndCoordinates(url: "https://restcountries.eu/rest/v2/name/\(country)?fields=name;flag;alpha2Code;latlng") {
                             country in
                             if let country = country {
@@ -78,11 +95,7 @@ extension CurrentLocationViewController: CLLocationManagerDelegate {
                                 }
                             }
                         }
-                        print(results)
-                    } else {
-                        
                     }
-                   
                 }
             }
         }

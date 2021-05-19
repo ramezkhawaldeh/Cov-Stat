@@ -15,6 +15,8 @@ class NewsTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var newsImageView: UIImageView!
     
+    private var urlLink: String?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         newsImageView.layer.borderWidth = 4
@@ -27,6 +29,14 @@ class NewsTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
         descriptionLabel.text = data?.description
         dateLabel.text = data?.publishedAt
         self.setNewsImage(url: data?.urlToImage)
+        self.urlLink = data?.url
+    }
+    
+    @IBAction func cellButtonPressed(_ sender: Any) {
+        guard let url = self.urlLink else { return }
+        if let url = URL(string: url) {
+            UIApplication.shared.open(url)
+        }
     }
     
     private func setNewsImage(url: String?) {

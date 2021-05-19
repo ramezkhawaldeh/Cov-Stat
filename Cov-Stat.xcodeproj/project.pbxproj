@@ -32,6 +32,7 @@
 		925F40D92654C58B00FC3D99 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925F40D72654C58B00FC3D99 /* NewsTableViewCell.xib */; };
 		925F40DB2654C66F00FC3D99 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40DA2654C66F00FC3D99 /* News.swift */; };
 		925F40DD2654E19D00FC3D99 /* CovidMapCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40DC2654E19D00FC3D99 /* CovidMapCity.swift */; };
+		92F53CB32655837D00CF100F /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F53CB22655837D00CF100F /* StatusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		925F40D72654C58B00FC3D99 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		925F40DA2654C66F00FC3D99 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		925F40DC2654E19D00FC3D99 /* CovidMapCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidMapCity.swift; sourceTree = "<group>"; };
+		92F53CB22655837D00CF100F /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		ED7904E45EDA14B3F4866E32 /* Pods-Cov-Stat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cov-Stat.release.xcconfig"; path = "Target Support Files/Pods-Cov-Stat/Pods-Cov-Stat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 			children = (
 				925F40BB2654907F00FC3D99 /* CurrentLocationViewController.swift */,
 				925F40B926548F7E00FC3D99 /* MapViewController.swift */,
+				92F53CB22655837D00CF100F /* StatusViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				925F40CB26549D5200FC3D99 /* UIViewController-NetworkExtension.swift in Sources */,
 				925F40C32654999100FC3D99 /* UITableView-Extension.swift in Sources */,
 				925F40DD2654E19D00FC3D99 /* CovidMapCity.swift in Sources */,
+				92F53CB32655837D00CF100F /* StatusViewController.swift in Sources */,
 				925F40DB2654C66F00FC3D99 /* News.swift in Sources */,
 				9229B17126556168000321C8 /* CovidData.swift in Sources */,
 				925F40C12654998700FC3D99 /* ReusableViewProtocol.swift in Sources */,

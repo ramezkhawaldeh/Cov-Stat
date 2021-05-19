@@ -8,16 +8,15 @@
 import UIKit
 
 class CovidCasesTableViewCell: UITableViewCell, NibLoadableView, ReusableView {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    @IBOutlet var infctedLabel: UILabel!
+    @IBOutlet var passedAwayLabel: UILabel!
+    @IBOutlet var recoveredLabel: UILabel!
+    
+    
+    func fill(with data: CovidResult) {
+        self.infctedLabel.text = "\((data.dates.first?.value.countries.first?.value.today_open_cases)! as Double)"
+        self.recoveredLabel.text = "\((data.dates.first?.value.countries.first?.value.today_new_recovered)! as Double)"
+        self.passedAwayLabel.text = "\((data.dates.first?.value.countries.first?.value.today_new_deaths)! as Double)"
+    }
 }
