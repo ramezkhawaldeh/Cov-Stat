@@ -42,7 +42,7 @@ extension UIViewController {
 
 extension UIViewController {
     
-     func getCountryFlag(url: String, completion: @escaping (Country?) -> Void) {
+    func getCountryFlagAndCoordinates(url: String, completion: @escaping (Country?) -> Void) {
         if let url = URL(string: url) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { data, response, error in
@@ -88,4 +88,58 @@ extension UIViewController {
         }
         return flagImage
     }
+    
+    func getNewsData(country: String, completionHandler: @escaping (News?) -> Void) {
+        if let url = URL(string: "https://newsapi.org/v2/top-headlines?\(country)&category=\(NewsCategory.health)&apiKey=\(APIKey.news.rawValue)") {
+            let session = URLSession(configuration: .default)
+            let task = session.dataTask(with: url) { [weak self] data, response, error in
+                let news: News?
+                guard let data = data, error == nil else {
+                    print(error?.localizedDescription)
+                    return
+                }
+                news = self?.parseNewsJSON(with: data)
+                completionHandler(news)
+            }
+            task.resume()
+        }
+    }
+    
+    private func parseNewsJSON(with data: Data) -> News? {
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(News.self, from: data)
+            return decodedData
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+    func getCovidCountiresList(completion: @escaping (CovidCountriesList?) -> Void) {
+        guard let url = URL(string: "https://api.covid19tracking.narrativa.com/api/countries") else { return }
+        let session = URLSession(configuration: .default)
+        var countriesList: CovidCountriesList?
+        let task = session.dataTask(with: url) { [weak self] data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription)
+                return
+            }
+            countriesList = self?.parseCovidCountiresJSON(with: data)
+            completion(countriesList)
+        }
+        task.resume()
+    }
+    
+    private func parseCovidCountiresJSON(with data: Data) -> CovidCountriesList? {
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(CovidCountriesList.self, from: data)
+            return decodedData
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
 }

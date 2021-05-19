@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,23 +19,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hSO-Qt-qZ5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gWP-dI-AUJ"/>
                                 </connections>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Orange-Yellow"/>
                         <constraints>
-                            <constraint firstItem="hSO-Qt-qZ5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dql-A5-uWq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hSO-Qt-qZ5" secondAttribute="trailing" id="UqM-t1-VhV"/>
+                            <constraint firstItem="hSO-Qt-qZ5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gd2-nB-6e8"/>
                             <constraint firstItem="hSO-Qt-qZ5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pEF-Fu-l7k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hSO-Qt-qZ5" secondAttribute="bottom" id="vgj-iq-ZP5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="World Map" image="globe" catalog="system" id="7sl-oN-evQ" userLabel="Item 3"/>
                     <navigationItem key="navigationItem" id="PkZ-5G-MY4"/>
+                    <connections>
+                        <outlet property="mapView" destination="hSO-Qt-qZ5" id="QxL-LH-FAi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,6 +64,10 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QAQ-fR-Lu3">
                                         <rect key="frame" x="8" y="207" width="398" height="562"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Uu9-Le-Mez" id="EXr-U8-4c9"/>
+                                            <outlet property="delegate" destination="Uu9-Le-Mez" id="46x-fP-KMY"/>
+                                        </connections>
                                     </tableView>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="s6m-JA-ScH">
                                         <rect key="frame" x="8" y="362" width="398" height="44"/>
@@ -81,7 +89,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Ta-Lk-JUA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Orange-Yellow"/>
                         <constraints>
                             <constraint firstItem="Fo6-l9-8dR" firstAttribute="top" secondItem="5Ta-Lk-JUA" secondAttribute="top" id="6y1-CA-w8c"/>
                             <constraint firstItem="5Ta-Lk-JUA" firstAttribute="bottom" secondItem="Fo6-l9-8dR" secondAttribute="bottom" id="QWN-qK-Wxp"/>
@@ -107,7 +115,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D1B-n5-6ZR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Rufous"/>
                     </tabBar>
                     <connections>
                         <segue destination="Uu9-Le-Mez" kind="relationship" relationship="viewControllers" id="rmq-pP-6Lu"/>
@@ -122,6 +130,12 @@
     <resources>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <namedColor name="Orange-Yellow">
+            <color red="0.95294117647058818" green="0.74509803921568629" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Rufous">
+            <color red="0.67843137254901964" green="0.10588235294117647" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

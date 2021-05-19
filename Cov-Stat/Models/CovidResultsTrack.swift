@@ -1,5 +1,5 @@
 //
-//  CovidResult.swift
+//  CovidResultsTrack.swift
 //  Cov-Stat
 //
 //  Created by Ramez Khawaldeh on 19/05/2021.
@@ -53,3 +53,13 @@ struct TotalCases: Codable {
     let yesterday_open_cases: Double
     let yesterday_recovered: Double
 }
+
+struct CovidCountriesList: Codable {
+    let countries: [CovidCountryDetails]
+}
+
+struct CovidCountryDetails: Codable {
+    let id: String?
+    let name: String?
+}
+//https://api.covid19tracking.narrativa.com/api/countries

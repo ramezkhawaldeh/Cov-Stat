@@ -19,11 +19,15 @@
 		925F40C32654999100FC3D99 /* UITableView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C22654999100FC3D99 /* UITableView-Extension.swift */; };
 		925F40C52654999B00FC3D99 /* UITableViewCell-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C42654999B00FC3D99 /* UITableViewCell-Extension.swift */; };
 		925F40C7265499A400FC3D99 /* NSObject-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40C6265499A400FC3D99 /* NSObject-Extension.swift */; };
-		925F40CB26549D5200FC3D99 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40CA26549D5200FC3D99 /* UIViewController-Extension.swift */; };
-		925F40CD26549D6C00FC3D99 /* CovidResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40CC26549D6C00FC3D99 /* CovidResult.swift */; };
+		925F40CB26549D5200FC3D99 /* UIViewController-NetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40CA26549D5200FC3D99 /* UIViewController-NetworkExtension.swift */; };
+		925F40CD26549D6C00FC3D99 /* CovidResultsTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40CC26549D6C00FC3D99 /* CovidResultsTrack.swift */; };
 		925F40CF2654BB9F00FC3D99 /* CountryFlagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40CE2654BB9F00FC3D99 /* CountryFlagData.swift */; };
 		925F40D12654C4F700FC3D99 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40D02654C4F700FC3D99 /* APIKey.swift */; };
 		925F40D32654C51B00FC3D99 /* NewsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40D22654C51B00FC3D99 /* NewsCategory.swift */; };
+		925F40D82654C58B00FC3D99 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40D62654C58B00FC3D99 /* NewsTableViewCell.swift */; };
+		925F40D92654C58B00FC3D99 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 925F40D72654C58B00FC3D99 /* NewsTableViewCell.xib */; };
+		925F40DB2654C66F00FC3D99 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40DA2654C66F00FC3D99 /* News.swift */; };
+		925F40DD2654E19D00FC3D99 /* CovidMapCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40DC2654E19D00FC3D99 /* CovidMapCity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,11 +46,15 @@
 		925F40C22654999100FC3D99 /* UITableView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-Extension.swift"; sourceTree = "<group>"; };
 		925F40C42654999B00FC3D99 /* UITableViewCell-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell-Extension.swift"; sourceTree = "<group>"; };
 		925F40C6265499A400FC3D99 /* NSObject-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject-Extension.swift"; sourceTree = "<group>"; };
-		925F40CA26549D5200FC3D99 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
-		925F40CC26549D6C00FC3D99 /* CovidResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidResult.swift; sourceTree = "<group>"; };
+		925F40CA26549D5200FC3D99 /* UIViewController-NetworkExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-NetworkExtension.swift"; sourceTree = "<group>"; };
+		925F40CC26549D6C00FC3D99 /* CovidResultsTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidResultsTrack.swift; sourceTree = "<group>"; };
 		925F40CE2654BB9F00FC3D99 /* CountryFlagData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagData.swift; sourceTree = "<group>"; };
 		925F40D02654C4F700FC3D99 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		925F40D22654C51B00FC3D99 /* NewsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCategory.swift; sourceTree = "<group>"; };
+		925F40D62654C58B00FC3D99 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		925F40D72654C58B00FC3D99 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		925F40DA2654C66F00FC3D99 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		925F40DC2654E19D00FC3D99 /* CovidMapCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidMapCity.swift; sourceTree = "<group>"; };
 		ED7904E45EDA14B3F4866E32 /* Pods-Cov-Stat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cov-Stat.release.xcconfig"; path = "Target Support Files/Pods-Cov-Stat/Pods-Cov-Stat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +100,7 @@
 		925F40A126548AE000FC3D99 /* Cov-Stat */ = {
 			isa = PBXGroup;
 			children = (
+				925F40D52654C57700FC3D99 /* Cells */,
 				925F40D42654C52500FC3D99 /* Enums */,
 				925F40BF2654996800FC3D99 /* Extensions */,
 				925F40B826548C8100FC3D99 /* Controllers */,
@@ -117,8 +126,10 @@
 		925F40B726548C7B00FC3D99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				925F40CC26549D6C00FC3D99 /* CovidResult.swift */,
+				925F40CC26549D6C00FC3D99 /* CovidResultsTrack.swift */,
 				925F40CE2654BB9F00FC3D99 /* CountryFlagData.swift */,
+				925F40DA2654C66F00FC3D99 /* News.swift */,
+				925F40DC2654E19D00FC3D99 /* CovidMapCity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,7 +150,7 @@
 				925F40C22654999100FC3D99 /* UITableView-Extension.swift */,
 				925F40C42654999B00FC3D99 /* UITableViewCell-Extension.swift */,
 				925F40C6265499A400FC3D99 /* NSObject-Extension.swift */,
-				925F40CA26549D5200FC3D99 /* UIViewController-Extension.swift */,
+				925F40CA26549D5200FC3D99 /* UIViewController-NetworkExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -151,6 +162,15 @@
 				925F40D22654C51B00FC3D99 /* NewsCategory.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		925F40D52654C57700FC3D99 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				925F40D62654C58B00FC3D99 /* NewsTableViewCell.swift */,
+				925F40D72654C58B00FC3D99 /* NewsTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		929D7BC7B8F4D62D267887D3 /* Frameworks */ = {
@@ -222,6 +242,7 @@
 			files = (
 				925F40AF26548AE200FC3D99 /* LaunchScreen.storyboard in Resources */,
 				925F40AC26548AE200FC3D99 /* Assets.xcassets in Resources */,
+				925F40D92654C58B00FC3D99 /* NewsTableViewCell.xib in Resources */,
 				925F40AA26548AE000FC3D99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,13 +297,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				925F40A326548AE000FC3D99 /* AppDelegate.swift in Sources */,
-				925F40CB26549D5200FC3D99 /* UIViewController-Extension.swift in Sources */,
+				925F40CB26549D5200FC3D99 /* UIViewController-NetworkExtension.swift in Sources */,
 				925F40C32654999100FC3D99 /* UITableView-Extension.swift in Sources */,
+				925F40DD2654E19D00FC3D99 /* CovidMapCity.swift in Sources */,
+				925F40DB2654C66F00FC3D99 /* News.swift in Sources */,
 				925F40C12654998700FC3D99 /* ReusableViewProtocol.swift in Sources */,
 				925F40BC2654907F00FC3D99 /* CurrentLocationViewController.swift in Sources */,
 				925F40A526548AE000FC3D99 /* SceneDelegate.swift in Sources */,
-				925F40CD26549D6C00FC3D99 /* CovidResult.swift in Sources */,
+				925F40CD26549D6C00FC3D99 /* CovidResultsTrack.swift in Sources */,
 				925F40CF2654BB9F00FC3D99 /* CountryFlagData.swift in Sources */,
+				925F40D82654C58B00FC3D99 /* NewsTableViewCell.swift in Sources */,
 				925F40D32654C51B00FC3D99 /* NewsCategory.swift in Sources */,
 				925F40C7265499A400FC3D99 /* NSObject-Extension.swift in Sources */,
 				925F40C52654999B00FC3D99 /* UITableViewCell-Extension.swift in Sources */,
