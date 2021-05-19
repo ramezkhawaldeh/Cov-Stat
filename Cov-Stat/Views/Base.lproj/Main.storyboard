@@ -61,6 +61,11 @@
                                         <rect key="frame" x="8" y="207" width="398" height="562"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="s6m-JA-ScH">
+                                        <rect key="frame" x="8" y="362" width="398" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.91372549020000005" green="0.74509803919999995" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -86,6 +91,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="V4g-la-7Ll"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="s6m-JA-ScH" id="0R2-Fj-m3w"/>
                         <outlet property="flagImageView" destination="0wM-18-XY0" id="FLB-V0-vUe"/>
                         <outlet property="tableView" destination="QAQ-fR-Lu3" id="WPX-bm-gPr"/>
                     </connections>
