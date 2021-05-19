@@ -10,6 +10,8 @@
 		0938640A74CA784A71047309 /* Pods_Cov_Stat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A5F45FA71F31E745712C5D /* Pods_Cov_Stat.framework */; };
 		9229B16C26554CC6000321C8 /* CovidCasesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9229B16A26554CC6000321C8 /* CovidCasesTableViewCell.swift */; };
 		9229B16D26554CC6000321C8 /* CovidCasesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9229B16B26554CC6000321C8 /* CovidCasesTableViewCell.xib */; };
+		9229B16F26555ECC000321C8 /* AllCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9229B16E26555ECC000321C8 /* AllCountries.swift */; };
+		9229B17126556168000321C8 /* CovidData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9229B17026556168000321C8 /* CovidData.swift */; };
 		925F40A326548AE000FC3D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40A226548AE000FC3D99 /* AppDelegate.swift */; };
 		925F40A526548AE000FC3D99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F40A426548AE000FC3D99 /* SceneDelegate.swift */; };
 		925F40AA26548AE000FC3D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925F40A826548AE000FC3D99 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		26A5F45FA71F31E745712C5D /* Pods_Cov_Stat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cov_Stat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9229B16A26554CC6000321C8 /* CovidCasesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCasesTableViewCell.swift; sourceTree = "<group>"; };
 		9229B16B26554CC6000321C8 /* CovidCasesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidCasesTableViewCell.xib; sourceTree = "<group>"; };
+		9229B16E26555ECC000321C8 /* AllCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCountries.swift; sourceTree = "<group>"; };
+		9229B17026556168000321C8 /* CovidData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidData.swift; sourceTree = "<group>"; };
 		925F409F26548AE000FC3D99 /* Cov-Stat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cov-Stat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925F40A226548AE000FC3D99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925F40A426548AE000FC3D99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				925F40CE2654BB9F00FC3D99 /* CountryFlagData.swift */,
 				925F40DA2654C66F00FC3D99 /* News.swift */,
 				925F40DC2654E19D00FC3D99 /* CovidMapCity.swift */,
+				9229B16E26555ECC000321C8 /* AllCountries.swift */,
+				9229B17026556168000321C8 /* CovidData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,9 +314,11 @@
 				925F40C32654999100FC3D99 /* UITableView-Extension.swift in Sources */,
 				925F40DD2654E19D00FC3D99 /* CovidMapCity.swift in Sources */,
 				925F40DB2654C66F00FC3D99 /* News.swift in Sources */,
+				9229B17126556168000321C8 /* CovidData.swift in Sources */,
 				925F40C12654998700FC3D99 /* ReusableViewProtocol.swift in Sources */,
 				925F40BC2654907F00FC3D99 /* CurrentLocationViewController.swift in Sources */,
 				925F40A526548AE000FC3D99 /* SceneDelegate.swift in Sources */,
+				9229B16F26555ECC000321C8 /* AllCountries.swift in Sources */,
 				925F40CD26549D6C00FC3D99 /* CovidResultsTrack.swift in Sources */,
 				925F40CF2654BB9F00FC3D99 /* CountryFlagData.swift in Sources */,
 				925F40D82654C58B00FC3D99 /* NewsTableViewCell.swift in Sources */,

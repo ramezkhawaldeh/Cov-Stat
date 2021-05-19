@@ -7,7 +7,8 @@
 
 import UIKit
 import MapKit
-
+import CoreLocation
+  
 class MapViewController: UIViewController {
     
     @IBOutlet var mapView: MKMapView!
@@ -16,86 +17,62 @@ class MapViewController: UIViewController {
     var countriesList: CovidCountriesList?
     var cities = [CovidMapCity]()
     
+    var allCountries: [CovidData] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        //locationManager.requestLocation()
+        self.tabBarController?.delegate = self
+        //mapView.isHidden = true
         
-       mapView.isHidden = true
-        
-        self.getCovidCountiresList { list in
-            if let list = list {
-                self.countriesList = list
-                
-                let dispatchGroup = DispatchGroup()
-                list.countries.forEach { country in
-                    dispatchGroup.enter()
-                    self.getCountryFlagAndCoordinates(url:"https://restcountries.eu/rest/v2/name/\(country.name)?fields=name;flag;alpha2Code;latlng" ) { city in
-                        
-                        self.cities.append(CovidMapCity(name: city!.name, coordinate: CLLocationCoordinate2D(latitude: city?.latlng[0], longitude: city?.latlng[1]), numberOfCases: String?))
-                        dispatchGroup.leave()
-                        
-                }
-                    dispatchGroup.notify(queue: .main) {
-                        //what to do
-                    }
-                    
-                    
-                }
-                
-               // self.
-            }
+        self.fetchAllCountries { country in
+            self.allCountries = country
         }
         
-       
-        print(self.countriesList)
-        self.tabBarController?.delegate = self
+//        self.getCovidCountiresList { list in
+//
+//            if let list = list {
+//                self.countriesList = list
+//                list.countries.forEach { country in
+//                    DispatchQueue.main.async {
+//                        self.getCountryFlagAndCoordinates(url:"https://restcountries.eu/rest/v2/name/\(country.name!)?fields=name;flag;alpha2Code;latlng" ) { city in
+//                            if let cityName = city?.name, let coordinate = city?.latlng {
+//                                self.cities.append(CovidMapCity(name: cityName, coordinate: CLLocationCoordinate2D(latitude: coordinate[0], longitude: coordinate[1]), numberOfCases: nil))
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
-
-    
 }
 
 //MARK: - Map Delegate
 extension MapViewController: MKMapViewDelegate {
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation is CovidMapCity else { return nil }
-        let reuseIdentifier = "City"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
-            if annotationView == nil {
-                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
-                annotationView?.canShowCallout = true
-                annotationView?.image = #imageLiteral(resourceName: "sick")
-                let button = UIButton(type: .detailDisclosure)
-                annotationView?.rightCalloutAccessoryView = button
-            } else {
-                annotationView?.annotation = annotation
-            }
-            return annotationView
-    }
-    
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        guard let capital = view.annotation as? CovidMapCity else { return }
-        let countryName = capital.countryName
-        let numberOfCases = capital.numberOfCases
-        let ac = UIAlertController(title: countryName, message: numberOfCases, preferredStyle: .actionSheet)
-        ac.addAction(UIAlertAction(title: "Do you want the latest news?", style: .destructive))
-        present(ac, animated: true)
-    }
-    
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        
+//    }
+//    
+//    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+//       
+//    }
+//    
 }
 
 //MARK: - Networking
 extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            let region = MKCoordinateRegion(center: location.coordinate,
+        if let location = self.allCountries.first {
+            let region = MKCoordinateRegion(center:CLLocationCoordinate2D(latitude: location.countryInfo.lat!, longitude: location.countryInfo.long!) ,
                                             latitudinalMeters: 50,
                                             longitudinalMeters: 50)
             mapView.setRegion(region, animated: true)
-            //mapView.addAnnotations(annotations)
+            mapView.showsUserLocation = true
+            ///mapView.addAnnotations(annotations)
             mapView.isHidden = false
         }
     }
@@ -107,4 +84,35 @@ extension MapViewController: CLLocationManagerDelegate {
 
 extension MapViewController: UITabBarControllerDelegate {
     
+}
+
+extension MapViewController {
+    
+    private func fetchAllCountries(completion: @escaping ([CovidData]) -> Void) {
+        if let url = URL(string: "https://corona.lmao.ninja/v2/countries?yesterday") {
+            let session = URLSession(configuration: .default)
+            let task = session.dataTask(with: url) { data, response, error in
+                let country: [CovidData]
+                guard let data = data, error == nil else {
+                    print(error?.localizedDescription)
+                    return
+                }
+                country = self.parseAllCountriesJSON(with: data)
+                completion(country)
+            }
+            task.resume()
+        }
+    }
+    
+    private func parseAllCountriesJSON(with data: Data) -> [CovidData] {
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode([CovidData].self, from: data)
+            return decodedData
+        }
+        catch {
+            print(error)
+            return []
+        }
+    }
 }

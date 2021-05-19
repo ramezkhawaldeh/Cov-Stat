@@ -46,7 +46,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-z4-YN4" userLabel="Title">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-z4-YN4" userLabel="Title">
                                 <rect key="frame" x="8" y="8" width="464" height="23"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -71,6 +71,7 @@
                             <constraint firstAttribute="trailing" secondItem="zey-q9-gck" secondAttribute="trailing" constant="8" id="o19-s8-zWg"/>
                             <constraint firstItem="1sz-c2-DzF" firstAttribute="top" secondItem="dhu-z4-YN4" secondAttribute="bottom" constant="16" id="tos-Zs-KIf"/>
                             <constraint firstItem="dhu-z4-YN4" firstAttribute="leading" secondItem="PBJ-V1-my3" secondAttribute="leading" constant="8" id="uU1-by-XEu"/>
+                            <constraint firstAttribute="height" constant="418" id="vZJ-UZ-gae"/>
                             <constraint firstItem="1sz-c2-DzF" firstAttribute="leading" secondItem="PBJ-V1-my3" secondAttribute="leading" constant="8" id="z8K-sv-fMR"/>
                         </constraints>
                     </view>
